@@ -70,14 +70,12 @@ class AllViewController: UIViewController, UIActionSheetDelegate {
         foodlabel.layer.position = CGPoint(x: self.view.bounds.width/2, y: 200)
         foodlabel.text = " 卵 \(personNumber)個 \n だし汁 大さじ\(personNumber) \n 塩 \(salt) \n しょうゆ \(soysauce) \n 酒 \(sake) \n 油 適量"
         foodlabel.numberOfLines = 0
-//        foodlabel.sizeToFit()
 //        self.view.addSubview(foodlabel)
         
         makeLabel.text = " 1. たまごを割って、軽く混ぜる \n 2. 調味料をいれて混ぜる \n 3. 油をひいて、強火にかける \n 4. 卵液を箸で落とし数秒で固まる温度になったら\n   　火を少し弱めて、卵液を半分くらい流し込む \n 5. 半熟になったらフライ返しで巻く \n 6. 残りの卵液を流し込む \n 7. 最後は弱火にして、卵液を流し込み、形を整える \n 8. 切ってお皿に盛り付けて、完成！！ \n 9. ななめに切るとハートにできるよ！"
         //\n\n\n\n\n\n\n\n\n\n\n\n\n\n12
         ingredientImage.image = UIImage(named: "ingre.gif")
         makeLabel.numberOfLines = 0
-//        makeLabel.sizeToFit()
         
   
     }

@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MdY-eV-hsV">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="D6H-O5-mTq">
+            <objects>
+                <navigationController id="MdY-eV-hsV" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZEH-VK-3Ka">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Fis-i9-9Wf" kind="relationship" relationship="rootViewController" id="p4l-yh-1SH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VCx-Un-V7U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="235.5" y="162.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bi6-0V-38b">
+            <objects>
+                <viewController id="Fis-i9-9Wf" customClass="ViewController" customModule="Cooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sfv-EA-Yap"/>
+                        <viewControllerLayoutGuide type="bottom" id="ON2-ly-Ive"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9wz-ul-Aci">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="color4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IfH-6H-WR1">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rew-bF-WFu">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="kGa-so-fAT">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brownC.png" translatesAutoresizingMaskIntoConstraints="NO" id="mvU-EG-Hl2">
+                                            <rect key="frame" x="38" y="-12" width="233" height="189"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="〜あなたに寄り添う料理アプリ〜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJN-He-ADF">
+                                            <rect key="frame" x="105" y="135" width="209" height="29"/>
+                                            <color key="backgroundColor" red="0.99823717950000002" green="0.99823717950000002" blue="0.99823717950000002" alpha="0.34221443969999998" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.31372549020000001" green="0.1450980392" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AtW-cg-9Ni">
+                                            <rect key="frame" x="0.0" y="178" width="320" height="129"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.49404633619999999" colorSpace="calibratedRGB"/>
+                                        </pickerView>
+                                        <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haA-gU-fEd">
+                                            <rect key="frame" x="38" y="312" width="100" height="100"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                            <state key="normal" title="決定" backgroundImage="clearspfolk.png">
+                                                <color key="titleColor" red="0.29803921570000003" green="0.1450980392" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="prZ-S6-kh1" kind="show" identifier="food" id="azj-R9-ejq"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htL-dU-0Mb">
+                                            <rect key="frame" x="183" y="312" width="100" height="100"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <state key="normal" title="履歴" backgroundImage="clearmemo.png">
+                                                <color key="titleColor" red="0.29803921570000003" green="0.1450980392" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="cvD-nc-dgH" kind="modal" identifier="history" id="OHm-Qy-La3"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="0.72106914030000002" blue="0.42359609250000002" alpha="0.52968749999999998" colorSpace="calibratedRGB"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <navigationItem key="navigationItem" id="cd4-nj-X30"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="menuPickerView" destination="AtW-cg-9Ni" id="nO7-jp-XM4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vbg-P0-bSg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="162"/>
+        </scene>
+        <!--履歴-->
+        <scene sceneID="nA8-62-Meh">
+            <objects>
+                <tableViewController id="DUo-Eu-6yj" customClass="ListTableViewController" customModule="Cooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="LRa-fF-Dh8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.64994746459999997" blue="0.62897303380000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myReco.png" id="Ilc-H9-Xzb">
+                            <rect key="frame" x="0.0" y="64" width="320" height="220"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="toCellViewController" rowHeight="90" id="MgO-Fy-wxm">
+                                <rect key="frame" x="0.0" y="312" width="320" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MgO-Fy-wxm" id="iDb-Y5-yvR">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="y9G-lR-yKp" kind="push" identifier="toCellViewController" id="cjA-1Z-jOB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DUo-Eu-6yj" id="uBL-2x-vAj"/>
+                            <outlet property="delegate" destination="DUo-Eu-6yj" id="qsw-DP-gZX"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="uve-jU-nzh"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="履歴" id="yDE-Q9-vWk">
+                        <barButtonItem key="leftBarButtonItem" title="もどる" id="a3I-fJ-1jS">
+                            <connections>
+                                <segue destination="SXT-es-nDQ" kind="unwind" unwindAction="back:" id="Fxr-Rh-EJ0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oif-rN-omt">
+                            <connections>
+                                <segue destination="Rdh-is-9YA" kind="push" id="rTy-SD-gFp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FYY-iR-e5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="SXT-es-nDQ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="786"/>
+        </scene>
+        <!--Cell View Controller-->
+        <scene sceneID="juG-e9-wgO">
+            <objects>
+                <viewController id="y9G-lR-yKp" customClass="CellViewController" customModule="Cooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="90R-O3-Aa9"/>
+                        <viewControllerLayoutGuide type="bottom" id="OPX-SZ-Jaz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RAJ-jR-paR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colochoco.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9Og-Sg-qLh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c0Q-0c-4hK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="55G-Mb-Chc">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VKw-wn-ABQ">
+                                            <rect key="frame" x="54" y="115" width="213" height="200"/>
+                                        </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="メモ" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFx-kg-XUl">
+                                            <rect key="frame" x="8" y="321" width="190" height="114"/>
+                                            <color key="backgroundColor" white="1" alpha="0.62516163790000001" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.31372549020000001" green="0.1450980392" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="料理名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPe-Qi-zl3">
+                                            <rect key="frame" x="34" y="72" width="252" height="35"/>
+                                            <color key="backgroundColor" red="0.98737879650000004" green="0.99316676979999996" blue="1" alpha="0.53000000000000003" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <color key="textColor" red="0.31372549020000001" green="0.1450980392" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日付" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6G-RZ-XcV">
+                                            <rect key="frame" x="184" y="386" width="130" height="49"/>
+                                            <color key="backgroundColor" red="0.98737879650000004" green="0.99316676979999996" blue="1" alpha="0.53000000000000003" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <color key="textColor" red="0.31372549020000001" green="0.1450980392" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluet.png" translatesAutoresizingMaskIntoConstraints="NO" id="Udq-h2-5zQ">
+                                            <rect key="frame" x="34" y="106" width="60" height="60"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green.png" translatesAutoresizingMaskIntoConstraints="NO" id="lcW-0A-tTT">
+                                            <rect key="frame" x="226" y="270" width="60" height="60"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pinkt.png" translatesAutoresizingMaskIntoConstraints="NO" id="zRD-RL-a16">
+                                            <rect key="frame" x="34" y="270" width="60" height="60"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="oranget.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Kb-pX-1yE">
+                                            <rect key="frame" x="226" y="106" width="60" height="60"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <navigationItem key="navigationItem" id="PSj-t5-j8h"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="o6G-RZ-XcV" id="eHG-EZ-0mP"/>
+                        <outlet property="imageView" destination="VKw-wn-ABQ" id="3s7-Xh-YI5"/>
+                        <outlet property="memoTextView" destination="NFx-kg-XUl" id="ySe-F5-ehw"/>
+                        <outlet property="nameLabel" destination="FPe-Qi-zl3" id="RBV-Wf-X8h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grc-K7-TKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1383" y="1355"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jjd-sa-BT6">
+            <objects>
+                <navigationController id="cvD-nc-dgH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1Cb-U0-iRL"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kht-am-oQE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DUo-Eu-6yj" kind="relationship" relationship="rootViewController" id="CHx-cL-7Pd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPJ-W8-tqi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="786"/>
+        </scene>
+        <!--登録-->
+        <scene sceneID="JDt-hE-A7c">
+            <objects>
+                <viewController id="Rdh-is-9YA" customClass="RegisterViewController" customModule="Cooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QUq-BZ-9sU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cgu-YV-v7v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tct-K4-iEI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="color3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fYV-r4-xdw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wms-Ez-xD9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="boZ-j1-ePe">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PJV-gb-eKv">
+                                            <rect key="frame" x="29" y="76" width="263" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="●memo●" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fq8-1l-OnX">
+                                            <rect key="frame" x="29" y="107" width="263" height="90"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.55255926720000004" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGS-ZC-brf">
+                                <rect key="frame" x="62" y="201" width="194" height="184"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.46499693580000001" blue="0.42232937440000001" alpha="0.58028017239999996" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="タップして、画像を取得できます">
+                                    <color key="titleColor" red="1" green="0.35034446559999999" blue="0.33955563329999999" alpha="0.92623922410000004" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectButton:" destination="Rdh-is-9YA" eventType="touchUpInside" id="4d6-Yo-m5t"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dq5-Ey-LdB">
+                                <rect key="frame" x="0.0" y="392" width="320" height="88"/>
+                                <color key="backgroundColor" red="0.90158045620000005" green="0.92473716579999998" blue="1" alpha="0.53978987069999995" colorSpace="calibratedRGB"/>
+                                <date key="date" timeIntervalSinceReferenceDate="478289471.43266797">
+                                    <!--2016-02-27 18:11:11 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="441802800">
+                                    <!--2015-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="946638000">
+                                    <!--2030-12-31 11:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="ja_JP"/>
+                            </datePicker>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sex-yh-RIW">
+                                <rect key="frame" x="64" y="204" width="191" height="178"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pinkt.png" translatesAutoresizingMaskIntoConstraints="NO" id="aCR-sS-1Oe">
+                                <rect key="frame" x="49" y="325" width="60" height="60"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="oranget.png" translatesAutoresizingMaskIntoConstraints="NO" id="zH1-ec-kfU">
+                                <rect key="frame" x="209" y="195" width="60" height="60"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green.png" translatesAutoresizingMaskIntoConstraints="NO" id="nwk-16-Fcn">
+                                <rect key="frame" x="209" y="325" width="60" height="60"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluet.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rvm-jy-aeZ">
+                                <rect key="frame" x="49" y="195" width="60" height="60"/>
+                            </imageView>
+                        </subviews>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Xxy-uf-EOr" appends="YES" id="86l-j8-A26"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="登録" id="ZbB-vL-Qfd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Ywn-Od-f6q">
+                            <connections>
+                                <action selector="save" destination="Rdh-is-9YA" id="KTP-aN-zBL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="datePicker" destination="dq5-Ey-LdB" id="A8t-yj-7xd"/>
+                        <outlet property="memoView" destination="Fq8-1l-OnX" id="Nph-IA-EUV"/>
+                        <outlet property="nameTextField" destination="PJV-gb-eKv" id="UJR-gx-ePl"/>
+                        <outlet property="photoImageView" destination="Sex-yh-RIW" id="zuO-Hu-SS7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Xf-8q-dYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Xxy-uf-EOr">
+                    <connections>
+                        <action selector="tapScreen:" destination="Rdh-is-9YA" id="doW-LN-avR"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1383" y="786"/>
+        </scene>
+        <!--Food View Controller-->
+        <scene sceneID="PKE-ZF-dkr">
+            <objects>
+                <viewController id="prZ-S6-kh1" customClass="FoodViewController" customModule="Cooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kal-hx-Zoi"/>
+                        <viewControllerLayoutGuide type="bottom" id="T3d-lV-LrR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o0d-SG-zr1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="color3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BSb-Ye-Be8">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YVI-jk-1wO">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="wR4-5V-5fz">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEC-Tw-I7x">
+                                            <rect key="frame" x="40" y="315" width="100" height="100"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                            <state key="normal" title="作り方一覧" backgroundImage="clearbook.png">
+                                                <color key="titleColor" red="0.29803921570000003" green="0.1450980392" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="YoU-6z-BPi" kind="show" identifier="all" id="Gm9-3l-SAA"/>
+                                            </connections>
+                                        </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brownclear.png" translatesAutoresizingMaskIntoConstraints="NO" id="P2h-h0-X8v">
+                                            <rect key="frame" x="5" y="8" width="174" height="94"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="料理名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7X-Pk-YUU">
+                                            <rect key="frame" x="20" y="45" width="141" height="46"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="0.29803921570000003" green="0.1450980392" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clearoval.png" translatesAutoresizingMaskIntoConstraints="NO" id="V1z-Id-v04">
+                                            <rect key="frame" x="144" y="11" width="171" height="91"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timer.png" translatesAutoresizingMaskIntoConstraints="NO" id="VA6-N9-rDv">
+                                            <rect key="frame" x="177" y="18" width="48" height="41"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="owan.gif" translatesAutoresizingMaskIntoConstraints="NO" id="EZU-sC-Ju7">
+                                            <rect key="frame" x="97" y="7" width="52" height="63"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="時間" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2P-Df-YGB">
+                                            <rect key="frame" x="169" y="52" width="134" height="37"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.30196078430000001" green="0.1450980392" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c8B-H0-uja">
+                                            <rect key="frame" x="72" y="120" width="177" height="175"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame1.png" translatesAutoresizingMaskIntoConstraints="NO" id="QJT-yD-1j2">
+                                            <rect key="frame" x="-6" y="88" width="333" height="239"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fw-S3-5Kf">
+                                            <rect key="frame" x="181" y="315" width="100" height="100"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <state key="normal" title="つくる" backgroundImage="clearcook.png">
+                                                <color key="titleColor" red="0.29803921570000003" green="0.1450980392" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="8x3-d1-Hth" kind="show" identifier="cook" id="EI1-sT-yDI"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.81176470590000005" green="0.59170895359999998" blue="0.47035758970000002" alpha="0.51179956900000001" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" red="0.81176470590000005" green="0.59170895359999998" blue="0.47035758970000002" alpha="0.48999999999999999" colorSpace="calibratedRGB"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MT6-3D-Cpl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="UYa-t9-o38"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                    </view>
+                    <navigationItem key="navigationItem" id="L0x-Ju-fnj"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="foodImage" destination="c8B-H0-uja" id="t9m-dN-O62"/>
+                        <outlet property="nameLabel" destination="c7X-Pk-YUU" id="TE0-rE-S10"/>
+                        <outlet property="timeLabel" destination="m2P-Df-YGB" id="21H-JE-V56"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iEQ-15-1xm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="162"/>
+        </scene>
+        <!--Cook View Controller-->
+        <scene sceneID="ezl-kr-BlV">
+            <objects>
+                <viewController id="8x3-d1-Hth" customClass="CookViewController" customModule="Cooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XDz-Bd-x9A"/>
+                        <viewControllerLayoutGuide type="bottom" id="nRK-rT-Oh4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n6B-0T-IlA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="color7.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JIy-8N-KUz">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXE-dY-3aS">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="PgH-mb-zC0">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m33-1R-JEf">
+                                            <rect key="frame" x="220" y="13" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <color key="textColor" red="0.89019607840000003" green="0.28627450980000002" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="up.png" translatesAutoresizingMaskIntoConstraints="NO" id="ufJ-Ah-Oja">
+                                            <rect key="frame" x="14" y="33" width="293" height="92"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="料理内容" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoR-QE-1Yk">
+                                            <rect key="frame" x="24" y="41" width="273" height="81"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.29803921570000003" green="0.1450980392" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="/ 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ulk-ap-7c0">
+                                            <rect key="frame" x="268" y="17" width="41" height="23"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.29803921570000003" green="0.1450980392" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZm-pk-d0X">
+                                            <rect key="frame" x="82" y="164" width="157" height="148"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluet.png" translatesAutoresizingMaskIntoConstraints="NO" id="MeC-x2-yvk">
+                                            <rect key="frame" x="63" y="155" width="60" height="60"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="oranget.png" translatesAutoresizingMaskIntoConstraints="NO" id="W37-SS-0Iu">
+                                            <rect key="frame" x="202" y="155" width="60" height="60"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pinkt.png" translatesAutoresizingMaskIntoConstraints="NO" id="cYH-Eo-QCm">
+                                            <rect key="frame" x="58" y="261" width="60" height="60"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WON-AK-MXa">
+                                            <rect key="frame" x="38" y="315" width="100" height="100"/>
+                                            <state key="normal" title="前へ" backgroundImage="clearprev.png">
+                                                <color key="titleColor" red="0.29803921570000003" green="0.1450980392" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="minus" destination="8x3-d1-Hth" eventType="touchUpInside" id="ZRe-34-W1o"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRI-8f-OLP">
+                                            <rect key="frame" x="173" y="315" width="100" height="100"/>
+                                            <state key="normal" title="次へ" backgroundImage="clearnext.png">
+                                                <color key="titleColor" red="0.29803921570000003" green="0.1450980392" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="plus" destination="8x3-d1-Hth" eventType="touchUpInside" id="4wf-DW-Fx0"/>
+                                            </connections>
+                                        </button>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="gtD-kP-ePD">
+                                            <rect key="frame" x="85" y="8" width="150" height="2"/>
+                                            <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </progressView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="down.png" translatesAutoresizingMaskIntoConstraints="NO" id="cmz-Lt-9D4">
+                                            <rect key="frame" x="14" y="123" width="293" height="36"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="必要なもの" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmU-ME-8pM">
+                                            <rect key="frame" x="24" y="126" width="273" height="28"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.29803921570000003" green="0.1450980392" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green.png" translatesAutoresizingMaskIntoConstraints="NO" id="W2J-rw-uP1">
+                                            <rect key="frame" x="202" y="261" width="60" height="60"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.81176470590000005" green="0.59170895359999998" blue="0.47035758970000002" alpha="0.48999999999999999" colorSpace="calibratedRGB"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <navigationItem key="navigationItem" id="2e5-db-hMW">
+                        <barButtonItem key="rightBarButtonItem" title="memo" id="QoU-oI-onx">
+                            <connections>
+                                <segue destination="hQ7-qH-zT6" kind="push" identifier="memo" id="qwB-mX-GRK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="allprocessText" destination="Ulk-ap-7c0" id="rch-Fm-ELA"/>
+                        <outlet property="foodContentsImage" destination="iZm-pk-d0X" id="uQo-qM-2QT"/>
+                        <outlet property="foodContentsText" destination="VoR-QE-1Yk" id="f46-hU-s1F"/>
+                        <outlet property="itemText" destination="OmU-ME-8pM" id="hgm-yZ-bFS"/>
+                        <outlet property="processBar" destination="gtD-kP-ePD" id="69y-0L-J27"/>
+                        <outlet property="processText" destination="m33-1R-JEf" id="Zp8-dt-KbI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oQp-ba-W6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1383" y="162"/>
+        </scene>
+        <!--Memo View Controller-->
+        <scene sceneID="Mr0-hQ-Fdu">
+            <objects>
+                <viewController id="hQ7-qH-zT6" customClass="memoViewController" customModule="Cooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="811-nV-c7m"/>
+                        <viewControllerLayoutGuide type="bottom" id="dji-zO-D4R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ePf-0Y-kCh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colochoco.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KwQ-8b-5nV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LOV-Oc-rZ1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="OcK-xs-a5m">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="12" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eER-9a-8m1">
+                                            <rect key="frame" x="32" y="312" width="120" height="120"/>
+                                            <state key="normal" title="前へ" backgroundImage="clearprev.png">
+                                                <color key="titleColor" red="0.31372549020000001" green="0.1450980392" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="minus" destination="hQ7-qH-zT6" eventType="touchUpInside" id="7RE-VR-AFK"/>
+                                            </connections>
+                                        </button>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="memo" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ify-wh-Zmn">
+                                            <rect key="frame" x="32" y="77" width="257" height="232"/>
+                                            <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="0.54762931029999995" colorSpace="calibratedRGB"/>
+                                            <gestureRecognizers/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQK-vZ-EWZ">
+                                            <rect key="frame" x="178" y="312" width="120" height="120"/>
+                                            <state key="normal" title="次へ" backgroundImage="clearnext.png">
+                                                <color key="titleColor" red="0.31372549020000001" green="0.1450980392" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="plus" destination="hQ7-qH-zT6" eventType="touchUpInside" id="lmx-MO-K0p"/>
+                                            </connections>
+                                        </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greent.png" translatesAutoresizingMaskIntoConstraints="NO" id="JY1-GS-kD7">
+                                            <rect key="frame" x="232" y="59" width="80" height="80"/>
+                                        </imageView>
+                                    </subviews>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="0EH-Yr-VtH" appends="YES" id="XKJ-tq-ej6"/>
+                                    </connections>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <navigationItem key="navigationItem" id="VXM-34-ouS">
+                        <rightBarButtonItems>
+                            <barButtonItem title="決定" id="sr4-1e-2ar">
+                                <connections>
+                                    <action selector="memoDoneButton" destination="hQ7-qH-zT6" id="fsT-eR-jkF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="AllReset" id="Zvg-KP-YgV">
+                                <connections>
+                                    <action selector="resetButton" destination="hQ7-qH-zT6" id="LdM-1k-jNR"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="memoTextView" destination="Ify-wh-Zmn" id="ZQA-KW-HwX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NZ9-S1-GeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0EH-Yr-VtH">
+                    <connections>
+                        <action selector="tapScreen:" destination="hQ7-qH-zT6" id="xXi-ks-9RF"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1767" y="162"/>
+        </scene>
+        <!--All View Controller-->
+        <scene sceneID="F1N-8i-QHM">
+            <objects>
+                <viewController id="YoU-6z-BPi" customClass="AllViewController" customModule="Cooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pDp-8X-ah9"/>
+                        <viewControllerLayoutGuide type="bottom" id="vbR-Zu-Zhk"/>
+                    </layoutGuides>
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="Jvk-Fg-9ew">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stripe.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KlF-4m-NGI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J8S-aT-Ufr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="lre-rd-M5u">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Srh-Yk-7Og">
+                                            <rect key="frame" x="168" y="85" width="140" height="134"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clearoval2.png" translatesAutoresizingMaskIntoConstraints="NO" id="kcB-ha-qgI">
+                                            <rect key="frame" x="157" y="16" width="162" height="61"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteperson.png" translatesAutoresizingMaskIntoConstraints="NO" id="3NI-Ek-vNz">
+                                            <rect key="frame" x="172" y="26" width="31" height="42"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="foodlabel" textAlignment="justified" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7Q-oH-GC7">
+                                            <rect key="frame" x="12" y="84" width="144" height="150"/>
+                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.58084590520000001" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="作り方" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMU-Et-cGN">
+                                            <rect key="frame" x="52" y="247" width="64" height="45"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="0.31372549020000001" green="0.1450980392" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brownclear.png" translatesAutoresizingMaskIntoConstraints="NO" id="RmA-CV-Zk3">
+                                            <rect key="frame" x="0.0" y="242" width="130" height="56"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kiritori.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Bal-mK-0Ru">
+                                            <rect key="frame" x="135" y="257" width="177" height="26"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTv-LQ-Kcv">
+                                            <rect key="frame" x="211" y="37" width="142" height="40"/>
+                                            <connections>
+                                                <action selector="ButtonTapped:" destination="YoU-6z-BPi" eventType="touchUpInside" id="YPP-fT-le4"/>
+                                            </connections>
+                                        </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fry.gif" translatesAutoresizingMaskIntoConstraints="NO" id="wuY-lJ-mcV">
+                                            <rect key="frame" x="8" y="242" width="45" height="45"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="makeLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gl-03-faU">
+                                            <rect key="frame" x="13" y="300" width="295" height="168"/>
+                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.57184806030000002" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="材料" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBw-MK-rHj">
+                                <rect key="frame" x="70" y="30" width="44" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.31372549020000001" green="0.1450980392" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bawl.gif" translatesAutoresizingMaskIntoConstraints="NO" id="zwy-RN-H9G">
+                                <rect key="frame" x="16" y="33" width="57" height="43"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="人数を選択▼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsC-DB-nQr">
+                                <rect key="frame" x="197" y="36" width="114" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.31372549020000001" green="0.1450980392" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brownclear.png" translatesAutoresizingMaskIntoConstraints="NO" id="g14-x7-tkX">
+                                <rect key="frame" x="8" y="21" width="121" height="57"/>
+                            </imageView>
+                        </subviews>
+                    </scrollView>
+                    <toolbarItems>
+                        <barButtonItem id="T4d-rF-Yoz"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="yoE-DS-PxF"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="foodlabel" destination="f7Q-oH-GC7" id="Gbz-jo-KGS"/>
+                        <outlet property="ingredientImage" destination="Srh-Yk-7Og" id="QJ5-2e-eBK"/>
+                        <outlet property="makeLabel" destination="0gl-03-faU" id="D5E-oX-xPN"/>
+                        <outlet property="personLabel" destination="dsC-DB-nQr" id="IFY-Ig-bYB"/>
+                        <outlet property="scrollView" destination="Jvk-Fg-9ew" id="aNj-iy-I0w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1GP-ih-SsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1383" y="-354"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bawl.gif" width="749" height="382"/>
+        <image name="bluet.png" width="716" height="688"/>
+        <image name="brownC.png" width="1548" height="962"/>
+        <image name="brownclear.png" width="1752" height="1024"/>
+        <image name="clearbook.png" width="1024" height="1024"/>
+        <image name="clearcook.png" width="1024" height="1024"/>
+        <image name="clearmemo.png" width="1024" height="1024"/>
+        <image name="clearnext.png" width="1024" height="1024"/>
+        <image name="clearoval.png" width="1752" height="1024"/>
+        <image name="clearoval2.png" width="1768" height="1058"/>
+        <image name="clearprev.png" width="1024" height="1024"/>
+        <image name="clearspfolk.png" width="1024" height="1024"/>
+        <image name="colochoco.jpg" width="501" height="615"/>
+        <image name="color3.jpg" width="500" height="353"/>
+        <image name="color4.jpg" width="500" height="375"/>
+        <image name="color7.jpg" width="640" height="960"/>
+        <image name="down.png" width="1752" height="281"/>
+        <image name="frame1.png" width="1827" height="1828"/>
+        <image name="fry.gif" width="672" height="589"/>
+        <image name="green.png" width="716" height="688"/>
+        <image name="greent.png" width="716" height="688"/>
+        <image name="kiritori.gif" width="1868" height="157"/>
+        <image name="myReco.png" width="576" height="338"/>
+        <image name="oranget.png" width="716" height="688"/>
+        <image name="owan.gif" width="714" height="396"/>
+        <image name="pinkt.png" width="716" height="688"/>
+        <image name="stripe.jpg" width="1920" height="1200"/>
+        <image name="timer.png" width="1024" height="1024"/>
+        <image name="up.png" width="1752" height="925"/>
+        <image name="whiteperson.png" width="904" height="1024"/>
+    </resources>
+</document>

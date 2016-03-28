@@ -17,7 +17,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     let menuArray = [
         "玉子焼き",
-        "肉じゃが",
+       // "肉じゃが",
         "オムライス"
     ]
     
@@ -32,8 +32,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         menuImageArray = [
                 UIImage(named: "egg9.jpg")!,
-                UIImage(named: "meatpotato.gif")!,
-                UIImage(named: "omu.gif")!
+             //   UIImage(named: "meatpotato.gif")!,
+                UIImage(named: "omurice.jpg")!
         ]
     }
 
@@ -59,7 +59,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     
     //menuの表示
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return menuArray[row]
     }
     
@@ -73,7 +73,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             foodViewController.nameText = menuArray[row] //料理名
             foodViewController.foodimage = menuImageArray[row] //料理名
             foodViewController.number = row //menuPickerViewの番号
-        } else if segue.identifier == "history" {
+       // } else if segue.identifier == "history" {
             
             
             

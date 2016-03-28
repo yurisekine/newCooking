@@ -14,8 +14,9 @@ class memoViewController: UIViewController {
     @IBOutlet var memoTextView: UITextView!
     //メモ用の配列を用意
     var TextViewArray: [String] = []
-    //配列の番号number(cookから)
+    //配列の番号number(cookから)、メモの番号
     var number: Int!
+    var foodnumber: Int!
     
     let saveData: NSUserDefaults = NSUserDefaults.standardUserDefaults()
     
@@ -40,19 +41,38 @@ class memoViewController: UIViewController {
             
         } else {
             //初期値
-            TextViewArray = [" ▼+Advice1▼ \n 卵は常温に戻しておこう！　\n ▽メモしよう▽　",
-                " ▼+Advice2▼ \n 卵は混ぜ過ぎないでおこう！卵白を切るイメージで！ \n ▽オリジナルでメモしよう▽",
-                " ▼+Advice3▼ \n 調味料は均等に混ざるように！ \n ▽オリジナルでメモしよう▽",
-                " ▼+Advice4▼ \n 強火で予熱！ \n ▽オリジナルでメモしよう▽",
-                " ▼+Advice5▼ \n 流し入れたら火を落として一定に！\n ▽オリジナルでメモしよう▽",
-                " ▼+Advice6▼ \n 半熟で巻いても熱で火が通るよ！ \n ▽オリジナルでメモしよう▽",
-                " ▼+Advice7▼ \n 全部で2~3回に分けるとうまくいくよ！ \n ▽オリジナルでメモしよう▽",
-                " ▼+Advice8▼ \n 弱火で綺麗な見た目にしよう！ \n ▽オリジナルでメモしよう▽",
-                " ▼+Advice9▼ \n 調味料は\n　お弁当に入れる場合→砂糖、\n　ふっくらさせたい場合→マヨネーズ\n　などあるので挑戦してみよう！ \n ▽オリジナルでメモしよう▽",
-                " ▼+Advice10▼ \n お弁当に入れると可愛い！ \n ▽オリジナルでメモしよう▽"]
-            memoTextView.text = TextViewArray[number - 1]
+            if foodnumber == 0 {
+                print(foodnumber)
+                TextViewArray = [" ▼+Advice1▼ \n 卵は常温に戻しておこう！　\n ▽メモしよう▽　",
+                    " ▼+Advice2▼ \n 卵は混ぜ過ぎないでおこう！卵白を切るイメージで！ \n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice3▼ \n 調味料は均等に混ざるように！ \n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice4▼ \n 強火で予熱！ \n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice5▼ \n 流し入れたら火を落として一定に！\n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice6▼ \n 半熟で巻いても熱で火が通るよ！ \n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice7▼ \n 全部で2~3回に分けるとうまくいくよ！ \n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice8▼ \n 弱火で綺麗な見た目にしよう！ \n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice9▼ \n 調味料は\n　お弁当に入れる場合→砂糖、\n　ふっくらさせたい場合→マヨネーズ\n　などあるので挑戦してみよう！ \n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice10▼ \n お弁当に入れると可愛い！ \n ▽オリジナルでメモしよう▽"]
+                memoTextView.text = TextViewArray[number - 1]
+            } else if foodnumber == 1{
+                print(foodnumber)
+                TextViewArray = [" ▼+Advice1▼\n ▽メモしよう▽　",
+                    " ▼+Advice2▼ \n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice3▼  \n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice4▼  \n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice5▼ \n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice6▼  \n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice7▼  \n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice8▼  \n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice9▼  \n ▽オリジナルでメモしよう▽",
+                    " ▼+Advice10▼  \n ▽オリジナルでメモしよう▽"]
+                memoTextView.text = TextViewArray[number - 1]
+            } else {
+                print(foodnumber)
+                print("ほーー")
+            }
         }
- 
+        
         
     }
     

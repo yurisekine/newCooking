@@ -30,9 +30,9 @@ class CookViewController: UIViewController {
         
         if foodnumber == 0 {
             Egg()
-        } else if foodnumber == 1 {
-            MeatPotato()
-        } else if foodnumber == 3{
+        /*} else if foodnumber == 1 {
+            MeatPotato()*/
+        } else if foodnumber == 1{
             omuRice()
         } else {
             //foodlabel.text = "\(number)"
@@ -97,7 +97,7 @@ class CookViewController: UIViewController {
         
     }
     
-    
+   /*
     func MeatPotato() {
         
         foodTextArray = ["じゃがいもは皮をむき、一口大に切って、水にさらして水気を切る",
@@ -121,12 +121,51 @@ class CookViewController: UIViewController {
         ]
         itemTextArray = []
         
-    }
+    }*/
     
     func omuRice() {
-        foodTextArray = ["玉ねぎ、鶏もも肉を切る",""]
-        foodImageArray = [UIImage(named: "1.jpg")!, UIImage(named: "2.jpg")!]
-        itemTextArray = ["玉ねぎ、鶏もも肉、包丁、まな板","",""]
+        foodTextArray = ["材料、用意するものは揃っているかな？",
+            "玉ねぎをみじん切り、鳥もも肉を1.5cm角に切る",
+            "バターをフライパンに入れて、弱火から中火で熱する",
+            "玉ねぎにゆっくりと火を通し、水分を飛ばす",
+            "鳥もも肉を入れて、色が変わるまで炒める",
+            "塩コショウをふって炒める",
+            "白米を入れてほぐしながら炒める",
+            "ご飯がパラリとしたらケチャップを入れて、全体になじむように炒める",
+            "ケチャップがなじんだら、お皿に移しておく",
+            "ボウルに卵と牛乳をいれて混ぜる",
+            "ペーパーでフライパンをさっと拭いてから、バターをフライパンに入れて中火にする",
+            "卵液を一度に加え、フライパン全体に広げる",
+            "フライパンを上下左右に少しずつゆする",
+            "卵の輪郭を菜箸でなぞるように削る",
+            "卵の上にチキンライスをのせる",
+            "フライパンを少し手前に傾け、向こう側から卵を破かないよう、フライ返しの先をフライパンに押し当てるようにして、卵の下に斜めに差し込む",
+            "卵をそっとチキンライスにかぶせる",
+            "フライ返しで手前に引き寄せて、フライパンの側面にかるく押し当てながら形作る",
+            "皿の上でフライパンを少し傾け、縁が皿に当たるくらいまで近づけ、オムライスを皿に移す",
+            "ケチャップで文字を書いて完成！!"]
+        foodImageArray = [UIImage(named: "zai.gif")!,
+            UIImage(named: "omu1.jpg")!,
+            UIImage(named: "omu2.jpg")!,
+            UIImage(named: "omu34.jpg")!,
+            UIImage(named: "omu34.jpg")!,
+            UIImage(named: "omu34.jpg")!,
+            UIImage(named: "omu6.jpg")!,
+            UIImage(named: "omu7.jpg")!,
+            UIImage(named: "omu1.jpg")!,//お皿に移す
+            UIImage(named: "omu9.jpg")!,
+            UIImage(named: "omu2.jpg")!,
+            UIImage(named: "omu11.jpg")!,
+            UIImage(named: "omu11.jpg")!,
+            UIImage(named: "omu12.jpg")!,
+            UIImage(named: "omu12.jpg")!,
+            UIImage(named: "omu13.jpg")!,
+            UIImage(named: "omu14.jpg")!,
+            UIImage(named: "omu15.jpg")!,
+            UIImage(named: "omurice.jpg")!,
+            UIImage(named: "omurice.jpg")!
+        ]
+        itemTextArray = ["手を洗って準備しよう！","玉ねぎ、鶏もも肉、包丁、まな板","バター、フライパン","玉ねぎ、木べら","鳥もも肉","塩コショウ","白米","ケチャップ","お皿","ボウル、卵、牛乳","ペーパー、バター、フライパン","卵液","","菜箸","チキンライス","フライ返し","菜箸","フライ返し","お皿","ケチャップ"]
     }
     
     @IBAction func plus() {
@@ -164,6 +203,8 @@ class CookViewController: UIViewController {
        // let row = PickerView.selectedRowInComponent(0)
         let row = self.number
         cookmemoViewController.number = Int(row)  //menuPickerViewの番号
+        cookmemoViewController.foodnumber = self.foodnumber
+        
     }
     
 

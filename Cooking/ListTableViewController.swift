@@ -141,7 +141,7 @@ class ListTableViewController: UITableViewController {
     
     
     //削除
-/*    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath ) -> Bool {
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath ) -> Bool {
         return true
     }
     
@@ -173,5 +173,5 @@ class ListTableViewController: UITableViewController {
             
 
         }
-    }*/
+    }
 }

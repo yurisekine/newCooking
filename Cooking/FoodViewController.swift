@@ -28,9 +28,9 @@ class FoodViewController: UIViewController {
         
         if number == 0 {
             timeLabel.text = "所要時間　15分"
+       // } else if number == 1 {
+       //     timeLabel.text = "所要時間　20分"
         } else if number == 1 {
-            timeLabel.text = "所要時間　20分"
-        } else if number == 3 {
             timeLabel.text = "所要時間　40分"
         } else {
         
@@ -58,7 +58,7 @@ class FoodViewController: UIViewController {
             cookViewController.foodnumber = row
             
         } else {
-            //
+            
         }
     }
 

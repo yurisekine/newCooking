@@ -36,7 +36,8 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         memoView.delegate = self
         
         
-        nameTextField.text = "料理名"
+        nameTextField.placeholder = "料理名"
+        
         
         if saveData.arrayForKey("NAME") != nil {
             nameArray = saveData.arrayForKey("NAME")!
@@ -82,6 +83,9 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
             
             //デリケートを設定
             picker.delegate = self
+            
+            //カメラを自由な形に開きたいとき（今回は正方形）
+            picker.allowsEditing = true
             
             self.presentViewController(picker, animated: true, completion: nil)
         }
@@ -186,7 +190,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
                 )
             )
             self.presentViewController(alert, animated: true, completion: nil)
-            nameTextField.text = "料理名"
+            nameTextField.text = ""
             photoImageView.image = nil
             memoView.text = "●memo●"
             

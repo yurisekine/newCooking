@@ -30,7 +30,7 @@ class memoViewController: UIViewController {
             //保存内容を格納
             let objects = saveData.objectForKey("memo") as? [String]
             
-            var memoString: AnyObject
+          //  var memoString: AnyObject  //これもしかしていらないかも？？
             
             for memoString in objects! {
                 

@@ -116,7 +116,7 @@ class AllViewController: UIViewController, UIActionSheetDelegate {
         let actionSheet = ActionSheetStringPicker(title: "choice person", rows: person, initialSelection: 0, doneBlock: {(picker, selectedIndex, id) -> Void in print("picker...\(picker), selectedIndex...\(selectedIndex), id...\(id)")
             
             self.personNumber = selectedIndex + 1
-            self.personLabel.text = person[selectedIndex] as! String
+            self.personLabel.text = person[selectedIndex] as? String
          
             if self.number == 0 {
                 self.Egg()

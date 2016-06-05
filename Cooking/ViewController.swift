@@ -78,7 +78,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
         } else {
-            print("エラー")
+            //print("エラー")
+            print("履歴")
         }
     }
 

@@ -94,7 +94,7 @@ class ListTableViewController: UITableViewController {
             cell.backgroundColor = UIColor.brownColor()
         }
         
-        return cell
+        return cell  //ここappDelegateにいくけど、実行できる
     }
     
     //セルが選択された場合

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fGr-1I-u7o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fGr-1I-u7o">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
@@ -71,7 +71,7 @@
                                                 <color key="titleColor" red="0.29803921570000003" green="0.1450980392" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <connections>
-                                                <segue destination="6Iz-tx-Fdb" kind="modal" identifier="" id="Bhs-c7-l8Z"/>
+                                                <segue destination="6Iz-tx-Fdb" kind="presentation" identifier="" id="Bhs-c7-l8Z"/>
                                             </connections>
                                         </button>
                                         <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NT8-K1-Hne">
@@ -133,14 +133,14 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aBF-1o-ggt">
                             <connections>
-                                <segue destination="OW8-H6-MnD" kind="push" id="lg0-h0-hHz"/>
+                                <segue destination="OW8-H6-MnD" kind="show" id="lg0-h0-hHz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <segue destination="tqH-p0-yfo" kind="push" identifier="toCellViewController" id="xa9-En-ydT"/>
+                        <segue destination="tqH-p0-yfo" kind="show" identifier="toCellViewController" id="xa9-En-ydT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fI-DS-2tr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -543,7 +543,7 @@
                     <navigationItem key="navigationItem" id="pef-a7-CkR">
                         <barButtonItem key="rightBarButtonItem" title="memo" id="Kjm-SK-G4j">
                             <connections>
-                                <segue destination="RUw-vT-1Qq" kind="push" identifier="memo" id="A31-2S-bp8"/>
+                                <segue destination="RUw-vT-1Qq" kind="show" identifier="memo" id="A31-2S-bp8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
